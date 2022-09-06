@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="/api/produtos/deletar" method="post">
+
+		<label>ID:</label>
+		<input type="number" class="number" name="/{id}" id="id" />
+		<label>Nome:</label>
+		<input type="text" class="text" name="nome" id="nome" />
+		<label>Preço:</label>
+		<input type="number" class="number" name="preco" id="preco" />
+		<label>Desconto:</label> 
+		<input type="number" class="number" name="desconto" id="desconto" /> 
+		<input type="submit" value="Deletar"/>
+
+	</form>
+
+</body>
+</html>

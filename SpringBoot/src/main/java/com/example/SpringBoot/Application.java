@@ -11,7 +11,3 @@ public class Application {
 	}
 
 }
-
-//para listar as portas caso apresente erro de porta já usada
-//no prompt de comando digitar netstat -a -n -o | findstr 8080
-//pegar o numeto do PID e para a execução pelo gerenciador de tarefas
