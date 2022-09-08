@@ -87,6 +87,5 @@ public class Produto {
 	}
 
 }
-
 // Alt + Shif + S - Para abrir as opções e clicar na opção de gerar os gettres e setters.
 // Ou Clicar com o direito do mouse e na opção Source abre a mesma janela. 

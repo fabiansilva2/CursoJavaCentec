@@ -11,10 +11,7 @@ import com.example.SpringBoot.Models.Entities.Produto;
 
 public interface ProdutoRepository extends PagingAndSortingRepository<Produto, Integer>{
 	
-	public Iterable<Produto> findByNomeContainingIgnoreCase(String parteNome); 
-		
-		
-	
+	public Iterable<Produto> findByNomeContainingIgnoreCase(String parteNome); 	
 	
 	// criado depois o PagingAndSortingRepository
 	// Estender ao repositorio CrudRepository
@@ -27,8 +24,5 @@ public interface ProdutoRepository extends PagingAndSortingRepository<Produto, I
 	
 
 }
-
-
 // Ver o conceito de injeção de dependencia.
 // É preciso separar todas as reponsabilidades.
-// Parei antes de criar o novo controller. Deverá ser criado o controller ProdutoController

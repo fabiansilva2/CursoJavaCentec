@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa Produto</title>
+</head>
+<body>
+    <input type="number" id="id" placeholder="Digite o ID do Objeto">
+    <button id="pesquisarProduto">Pesquisar Produto</button>
+    <button id="limparPesquisa">Limpar</button>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#pesquisarProduto").click(function(){
+                var id = $("#id").val();
+                if (id.length == 0) {
+                    alert("Nada digitado");
+                } else {
+
+                    $.get("http://localhost:8080/api/produtos/" + id, function(dados){
+                        document.write(dados.id + " - " + dados.nome + " - " +  dados.preco + " - " +  
+                        dados.desconto);
+
+                        console.log(dados);
+                    });
+                }
+            });
+
+            $("#limparPesquisa").click(function(){
+                $("#id").val("");
+            }); 
+        });        
+    </script>   
+</body>
+</html>
